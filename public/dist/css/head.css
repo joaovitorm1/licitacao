@@ -1,0 +1,37 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+	.mosaico {
+		height: 0px !important;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 576.99px) and (max-width: 768.98px) { 
+	.mosaico {
+		height: 1px !important;
+	}
+}
+
+@media (min-width: 768.99px) and (max-width: 990.98px) { 
+	.mosaico {
+		height: 5px !important;
+	}
+}
+
+// X-Large devices (large desktops, 1200px and up)
+
+@media (min-width: 991.99px) and (max-width: 1200px) { 
+	.mosaico {
+		height: 7px !important;
+	}
+}
+@media (min-width: 991px) and (max-width: 1500.98px) {
+	.mosaico {
+		height: 7px !important;
+	}
+}
+
+    

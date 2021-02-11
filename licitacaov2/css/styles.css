@@ -1,0 +1,131 @@
+body {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.button-files {
+    width:100%;
+    line-height:3rem !important;
+    margin-top:.5rem;
+    background:#73ac33 !important;
+    color:#FFF !important;
+    border:none !important;
+    font-weight:bold !important;
+    text-align:left;
+}
+
+.button-files:hover {
+    background: #8fd73f !important;
+}
+
+.fas {
+    color: #FFF !important;
+    font-size: 2rem;
+    float: left;
+    margin-top:.3rem;
+    margin-right:2rem;
+}
+
+.fa-file-pdf::before {
+    color:#FFF !important;
+}
+
+.t1 {
+    font-size:.8rem;
+    color: #818181;
+}
+
+.t2 {
+    font-weight:bold;
+    font-size:.9rem;
+}
+
+h2 {
+    border-bottom:2px solid #CCC;
+    padding-bottom:2rem;
+    font-weight: bold;
+}
+
+.box-text-intern .content-text-intern {
+    box-shadow: none !important;
+    background: #f1f1f1;
+}
+
+.table .thead-dark th {
+    font-size:.7rem !important;
+}
+
+.table td:hover {
+    cursor:  pointer;
+}
+
+.pagination li {
+
+    border-radius: 3px;
+    padding:.3rem .5rem;
+    margin-left:.3rem;
+    background:#CCC !important;
+    color:#FFF !important;
+}
+
+.pagination li:hover {
+    background: #8fd73f !important;
+}
+
+.pagination li a {
+    color:#FFF;
+}
+
+.pagination li a:hover {
+    text-decoration: none;
+    color:#FFF;
+}
+
+table {
+    font-size:.8rem;
+}
+
+.admin-board {
+    background:#FFFFFF;
+    border-radius:5px;
+}
+
+label {
+    font-size:.9rem;
+}
+
+.form-control {
+    font-size:.9rem;
+    padding:.3rem !important;
+}
+
+.nav-item {
+    background: #73ac33;
+    padding: 1rem;
+    border-radius: 3px;
+    margin-left: .5rem;
+    font-weight:bold;
+}
+
+.nav-item:hover {
+    background:#8fd73f;
+}
+
+.nav-link {
+    color:#FFF;
+}
+
+.nav-link:hover {
+    color:#FFF;
+    background:transparent !important;
+}
+
+.button-register {
+    background:#73ac33;
+    color:#FFF;
+    padding:1rem 5rem;
+    font-weight:bold;
+    border:none;
+    margin:0 auto;
+    display:block;
+    margin-top:3rem;
+}
