@@ -2,8 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @yield('metadados')
 
@@ -37,11 +37,15 @@
       <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.js"></script>
       <!-- Toastr -->
       <script src={{asset("/plugins/toastr/toastr.min.js")}}></script>
-      <script src={{asset("/js/adminlte.min.js")}}></script>
+      <script src={{asset("/dist/js/adminlte.min.js")}}></script>
       <script>
          $(document).ready(function() {
-     $('#example').DataTable();
- } );
+    $('#datatable').DataTable( {
+      "order": [[ 0, "desc" ]],
+      "pageLength": 15
+    } );
+} );
+
        </script>
       <!-- CSS ESPECIFICO DA PÁGINA -->
    @yield('js-pagina')

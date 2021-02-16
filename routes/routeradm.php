@@ -9,8 +9,11 @@ Route::prefix('/adm')->group(function () {
             AdmController::class,"index"
         ])->name("index.adm");
         
-        Route::get("/addnoticias",[
-            AdmController::class,"addnoticias"
-        ])->name("addnoticias.adm");
+        Route::get("/pdf/adicionar",[
+            AdmController::class,"adicionarpdf"
+        ])->name("adm.pdf");
+        Route::get("/pdf/adiciona",[
+            AdmController::class,"adicionapdf"
+        ])->name("adm.pdfadd");
     
     });

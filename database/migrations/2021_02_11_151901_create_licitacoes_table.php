@@ -11,29 +11,30 @@ class CreateLicitacoesTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+    public $timestamps = false;
+    public function up(){
         Schema::create('licitacoes', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
             $table->string('num_edital');
             $table->string('num_processo');
-            $table->integer('data_publicacao');
-            $table->integer('data_abertura');
+            $table->integer('data_publicacao')->length(11);
+            $table->integer('data_abertura')->length(11);
             $table->string('modalidade');
             $table->string('objeto');
             $table->string('situacao');
             $table->string('resultado');
-            $table->integer('text_licitacao');
+            $table->string('text_licitacao');
         });
     }
+
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
-    {
+    public function down(){
         Schema::dropIfExists('licitacoes');
     }
 }

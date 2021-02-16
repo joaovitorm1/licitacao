@@ -18,7 +18,7 @@
             <!-- Left navbar links -->
             <ul class="navbar-nav m-auto">
               <li class="nav-item dropdown">
-                <a href="{{route('index')}}" class="nav-link text-light"><i class="far fa-home-lg-alt"></i>inicio</a>
+                <a href="{{route('licitacao.index')}}" class="nav-link text-light"><i class="far fa-home-lg-alt"></i>inicio</a>
               </li>
               <li class="">
                 <a href="https://Portoseguro.ba.gov.br" class="nav-link text-light">Site Oficial</a>

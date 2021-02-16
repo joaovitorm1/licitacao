@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\licitacaocontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+
+  /* Rota para lista licitacao */
+  Route::get('/', 
+  [licitacaocontroller::class, 'listalicitacao'])
+  ->name('licitacao.index');
 /*Route::get('/prefeitura', function () {
     return view('prefeitura');
 })->name('prefeitura');*/

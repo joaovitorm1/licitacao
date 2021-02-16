@@ -11,15 +11,16 @@ class CreateFileUploadsTable extends Migration
      *
      * @return void
      */
+    public $timestamps = false;
     public function up()
     {
         Schema::create('file_uploads', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer("lid");
+            $table->unsignedBigInteger('lid')->nullable();
             $table->string("file_name");
             $table->string("name_custom");
-            $table->foreign('lid')->references('id')->on('licitacoes');
+            $table->foreign('lid')->references('id')->on('licitacoes')->onDelete('cascade');;
         });
     }
 
