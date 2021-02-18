@@ -19,4 +19,7 @@ class licitacoes extends Model
         'resultado',
         'text_licitacao',
     ];
+    public function file_uploads(){
+        return $this->hasMany(file_uploads::class);
+    }
 }

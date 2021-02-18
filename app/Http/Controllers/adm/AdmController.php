@@ -13,13 +13,19 @@ class AdmController extends Controller{
       return view('adm/pdf',['licitacao'=>$licitacao]);
     }
     public function adicionapdf(Request $request){
-      foreach($request as $item){
+      dd($request->file_name);
+      $licitacao= licitacoes::where('id',432)->with('file_uploads')->first();
+      if($request->file("file_name")->isValid()){
+        if($request->file("file_name")->extension()==="pdf"){
           $pdf = new file_uploads;
-          $pdf->lid = 544;
-          $pdf->file_name = $request->file_name;
+          $pdf->licitacoes()->associate($licitacao);
+          $pdf->file_name = $request->file("file_name")->store('pdf');
           $pdf->name_custom = $request->name_custom;
           $pdf->save();
-          dd($pdf->file_name);
+          $licitacao= licitacoes::where('id',432)->with('file_uploads')->first();
+          return response()->json($pdf);
+        }
       }
+      
   }
 }

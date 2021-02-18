@@ -12,7 +12,7 @@ Route::prefix('/adm')->group(function () {
         Route::get("/pdf/adicionar",[
             AdmController::class,"adicionarpdf"
         ])->name("adm.pdf");
-        Route::get("/pdf/adiciona",[
+        Route::post("/pdf/adiciona",[
             AdmController::class,"adicionapdf"
         ])->name("adm.pdfadd");
     

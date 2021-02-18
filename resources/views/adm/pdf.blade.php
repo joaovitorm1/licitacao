@@ -1,7 +1,9 @@
 @extends('adm.templateadm.template')
 @section('titulo-aplicativo', 'Licitacao')
 @section('titulo-pagina', 'Adicionar pdf')
-
+@section('metadados')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+@endsection
 @section('conteudo-principal')
 <section class="content">
     <div class="container-fluid">
@@ -15,7 +17,8 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="{{Route('adm.pdfadd')}}">
+            <form  method="POST" enctype="multipart/form-data">
+              @csrf
               <div class="card-body" id="div-pdf">
                 <div class="form-group">
                     <label>Edital</label>
@@ -24,7 +27,7 @@
                     </select>
                 </div>
                 <div class="form-group mb-0">
-                    <button class="btn btn-danger" id="btn-adicionar-pdf">adicionar arquivo</button>
+                    <button class="btn btn-danger" id="btn-adicionar-pdf" onclick="adicionapdf()">adicionar arquivo</button>
                 </div>
               </div>
               <!-- /.card-body -->
@@ -48,4 +51,11 @@
   @endsection
 @section('js-pagina')
 <script src={{asset("js/pdf.js")}}></script>
+
+<script>
+  item = 0;
+
+  @component('componentes.alert') @endcomponent
+</script>
+
 @endsection
